@@ -32,7 +32,7 @@ import mx.infotec.dads.sekc.model.essence.GraphicalElement;
  * @author Daniel Cortes Pichardo
  * @version 1.1
  * @see LanguageElement
- *  
+ * 
  * @since essence 1.1
  */
 public abstract class BasicElement extends LanguageElement {

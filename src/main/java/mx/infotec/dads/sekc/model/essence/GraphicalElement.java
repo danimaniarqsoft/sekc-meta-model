@@ -24,7 +24,7 @@
 package mx.infotec.dads.sekc.model.essence;
 
 /**
- * The Class GraphicalElement.
+ * The Class GraphicalElement. It is one of four data types used for attributes.
  *
  * @author Daniel Cortes Pichardo
  * @version 1.1

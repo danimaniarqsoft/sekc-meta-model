@@ -34,50 +34,47 @@ import mx.infotec.dads.sekc.model.essence.view.*;
  * See <a href="http://www.omg.org/spec/Essence/1.1/"> The Essence - Kernel And
  * Language For SOftware Engineering Methods, Version 1.1</a> for more details
  * on the use of the language.
- *
+ * 
  * @author Daniel Cortes Pichardo
  * @version 1.1
- * @see ViewSelection
- * @see FeatureSelection
- * @see ViewSelection
- * @see ExtensionElement
- * @see ElementGroup
- * @see PatternAssociation
- * @see Resource
- * @see EndeavorProperty
- * @see Tag
  * @since essence 1.1
  */
 public abstract class LanguageElement {
 
-    /** The view selection. */
+    /**
+     * A flag indicating whether this element may be suppressed in an extension
+     * or composition (see 9.4.3.2 on the essence standart)
+     */
+    public boolean isSuppressable = true;
+
+    /**
+     * A list of ViewSelection selects a subset of constructs and construct
+     * features such as attributes and associations.
+     */
     public Collection<ViewSelection> viewSelection;
-    
+
     /** The feature selection. */
     public Collection<FeatureSelection> featureSelection;
-    
+
     /** The extension. */
     public Collection<ExtensionElement> extension;
-    
+
     /** The referrer. */
     public Collection<ElementGroup> referrer;
-    
+
     /** The owner. */
     public ElementGroup owner;
-    
+
     /** The pattern association. */
     public Collection<PatternAssociation> patternAssociation;
-    
+
     /** The resource. */
     public Collection<Resource> resource;
-    
+
     /** The properties. */
     public Collection<EndeavorProperty> properties;
-    
+
     /** The tag. */
     public Collection<Tag> tag;
-    
-    /** The is suppressable. */
-    public boolean isSuppressable = true;
 
 }

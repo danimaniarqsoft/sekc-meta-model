@@ -28,30 +28,43 @@ import java.util.*;
 import mx.infotec.dads.sekc.model.essence.foundation.*;
 
 /**
- * The Class ViewSelection.
- *
+ * The Class ViewSelection selects a subset of constructs and construct features
+ * such as attributes and associations
+ * 
+ * Invariant
+ * 
+ * *
+ * 
+ * <pre>
+ * {@code
+ * -- The featureSelections in a ViewSelection V refers to constructs that are
+ * part of constructSelections in V. self.featureSelection->forAll(fs |
+ * self.constructSelection -> inludes(fs.construct))
+ * }
+ * </pre>
+ * 
  * @author Daniel Cortes Pichardo
  * @version 1.1
  * @since essence 1.1
  */
 public class ViewSelection extends LanguageElement {
 
+    /** The name of the view */
+    public String name;
+
+    /** A description of the view, including the purpose of the view */
+    public String description;
+
     /** The referring view selection. */
     public Collection<ViewSelection> referringViewSelection;
-    
+
     /** The construct selection. */
     public Collection<LanguageElement> constructSelection;
-    
+
     /** The included view selection. */
     public Collection<ViewSelection> includedViewSelection;
-    
+
     /** The feature selection. */
     public Collection<FeatureSelection> featureSelection;
-    
-    /** The name. */
-    public String name;
-    
-    /** The description. */
-    public String description;
 
 }

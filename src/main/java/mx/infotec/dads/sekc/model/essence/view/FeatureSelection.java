@@ -28,21 +28,27 @@ import java.util.*;
 import mx.infotec.dads.sekc.model.essence.foundation.*;
 
 /**
- * The Class FeatureSelection.
+ * The Class FeatureSelection. A reference to a construct feature such as a
+ * particular attribute or association.
  *
+ * Invariant true
+ * 
  * @author Daniel Cortes Pichardo
  * @version 1.1
  * @since essence 1.1
  */
 public class FeatureSelection extends LanguageElement {
 
+    /**
+     * The feature name. The name of the referred feature, such as the name of
+     * an attribute or the role name of an association.
+     */
+    public String featureName;
+
     /** The view selection. */
     public Collection<ViewSelection> viewSelection;
-    
+
     /** The construct. */
     public LanguageElement construct;
-    
-    /** The feature name. */
-    public String featureName;
 
 }

@@ -28,36 +28,65 @@ import java.util.*;
 import mx.infotec.dads.sekc.model.essence.GraphicalElement;
 
 /**
- * The Class ElementGroup.
- *
+ * <pre>
+ * <b>Description: </b>
+ * </pre>
+ * The Abstract Class ElementGroup. A generic name for an Essence concept that
+ * names a collection of elements. Element groups are recursive, so a group may
+ * own other groups, as well as other (non-group) elements.
+ * 
+ * <pre>
+ * 
+ * <b>Invariant:</b>
+ * 
+ * {@code
+ * -- An element group may not own itself
+ * self.allElements(ElementGroup)->excludes(self)
+ * 
+ * -- An element group may only extend elements it owns
+ * self.extensions->forAll(e | self.allElements(e.targetElement.oclType())->includes(e.targetElement))
+ * }
+ * </pre>
+ * 
  * @author Daniel Cortes Pichardo
  * @version 1.1
  * @since essence 1.1
+ * 
  */
 public abstract class ElementGroup extends LanguageElement {
 
+    /** The name of the element group */
+    public String name;
+
+    /** The icon to be used when presenting the element group */
+    public GraphicalElement icon;
+
+    /**
+     * A short description of what the group is. It is discoraged to use rich
+     * formatting and structuring elements like section headings in the brief
+     * description. The content of this attribute should be a summary of the
+     * content given in attribute "description".
+     */
+    public String briefDescription;
+
+    /**
+     * A more detailed description of the group. The content of this attribute
+     * may be written in a markup language to allow for rich descriptions. It
+     * may include section headings, formatting information, hyperlinks, or
+     * similar to ease structured reading and navigation.
+     */
+    public String description;
+
     /** The merge resolution. */
     public Collection<MergeResolution> mergeResolution;
-    
+
     /** The owned elements. */
     public Collection<LanguageElement> ownedElements;
-    
+
     /** The referred elements. */
     public Collection<LanguageElement> referredElements;
-    
+
     /** The extension. */
     public Collection<ExtensionElement> extension;
-    
-    /** The name. */
-    public String name;
-    
-    /** The icon. */
-    public GraphicalElement icon;
-    
-    /** The brief description. */
-    public String briefDescription;
-    
-    /** The description. */
-    public String description;
 
 }

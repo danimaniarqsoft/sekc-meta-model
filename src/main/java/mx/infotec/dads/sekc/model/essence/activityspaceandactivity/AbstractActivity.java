@@ -28,7 +28,8 @@ import java.util.Collection;
 import mx.infotec.dads.sekc.model.essence.foundation.BasicElement;
 
 /**
- * The Class AbstractActivity.
+ * The Class AbstractActivity. An abstract activity is either a placeholder for
+ * something to be done or a concrete activity to be performed.
  *
  * @author Daniel Cortes Pichardo
  * @version 1.1
@@ -39,7 +40,10 @@ public abstract class AbstractActivity extends BasicElement {
     /** The activity association. */
     public Collection<ActivityAssociation> activityAssociation;
 
-    /** The criterion. */
+    /**
+     * The criterion. A collection of criteria that have to be fulfilled for
+     * entering the activity or considering the activity completed
+     */
     public Collection<Criterion> criterion;
 
 }
