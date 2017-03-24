@@ -26,7 +26,30 @@ package mx.infotec.dads.sekc.model.essence.userdefinedtypes;
 import mx.infotec.dads.sekc.model.essence.foundation.*;
 
 /**
- * The Class TypedPattern.
+ * <pre>
+ * <b>Description: </b>
+ * </pre>
+ * 
+ * The Class TypedPattern. A pattern that has a user defined type.
+ * 
+ * <pre>
+ * 
+ * <b>Invariant:</b>
+ * 
+ * {@code
+ * true
+ * }
+ * </pre>
+ * 
+ * <pre>
+ * 
+ * <b>Semantics:</b>
+ * 
+ * Typed patterns are used to ease interchange and consistent interpretation of complex patterns across tools and
+ * organizations. Based on the type given to the pattern, certain pattern associations can be expected to be present or not
+ * present on a particular pattern instance.
+ * 
+ * </pre>
  *
  * @author Daniel Cortes Pichardo
  * @version 1.1
@@ -34,7 +57,7 @@ import mx.infotec.dads.sekc.model.essence.foundation.*;
  */
 public class TypedPattern extends Pattern {
 
-    /** The kind. */
+    /** The user defined type associated with this pattern */
     public UserDefinedType kind;
 
 }

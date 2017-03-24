@@ -26,7 +26,30 @@ package mx.infotec.dads.sekc.model.essence.userdefinedtypes;
 import mx.infotec.dads.sekc.model.essence.foundation.*;
 
 /**
- * The Class TypedResource.
+ * <pre>
+ * <b>Description: </b>
+ * </pre>
+ * 
+ * The Class TypedResource. A resource that has a user defined type.
+ * 
+ * <pre>
+ * 
+ * <b>Invariant:</b>
+ * 
+ * {@code
+ * true
+ * }
+ * </pre>
+ * 
+ * <pre>
+ * 
+ * <b>Semantics:</b>
+ * 
+ * Typed resources are used to ease interchange and consistent interpretation of resources across tools and organizations.
+ * Based on the type given to a resource, tools and users can decide how to interpret, display, and use the content of the
+ * resource.
+ * 
+ * </pre>
  *
  * @author Daniel Cortes Pichardo
  * @version 1.1
@@ -34,7 +57,7 @@ import mx.infotec.dads.sekc.model.essence.foundation.*;
  */
 public class TypedResource extends Resource {
 
-    /** The kind. */
+    /** The user defined type associated with this resource. */
     public UserDefinedType kind;
 
 }

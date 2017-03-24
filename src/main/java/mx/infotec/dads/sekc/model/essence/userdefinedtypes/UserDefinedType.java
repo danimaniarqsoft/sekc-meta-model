@@ -28,7 +28,36 @@ import java.util.*;
 import mx.infotec.dads.sekc.model.essence.foundation.*;
 
 /**
- * The Class UserDefinedType.
+ * <pre>
+ * <b>Description: </b>
+ * </pre>
+ * 
+ * The Class UserDefinedType. A user defined type is a named type containing a
+ * description and constraints that can be used to detail patterns, resources,
+ * and tags.
+ * 
+ * <pre>
+ * 
+ * <b>Invariant:</b>
+ * 
+ * {@code
+ * true
+ * }
+ * </pre>
+ *
+ * <pre>
+ * 
+ * <b>Semantics:</b>
+ * 
+ *User defined types are intended to detail, explain, and constrain the proper usage of particular patterns, resources, or tags.
+ *
+ *The constraints defined by the type are meant to be evaluated on each typed element that is associated with this type.
+ *Elements on which the evaluation fails are considered ill-defined. For example, a constraint on a type called “triary
+ *pattern” could express that this type is intended to be used on typed patterns with at exactly three pattern associations.
+ *Hence, using this type on other elements than typed patterns would be reported as ill-defined usage. Similarly, using this
+ *type on a typed pattern with more or less than three pattern associations would also be ill-defined usage.
+ *
+ * </pre>
  *
  * @author Daniel Cortes Pichardo
  * @version 1.1
@@ -36,22 +65,25 @@ import mx.infotec.dads.sekc.model.essence.foundation.*;
  */
 public class UserDefinedType extends LanguageElement {
 
-	/** The typed resource. */
-	public Collection<TypedResource> typedResource;
-	
-	/** The typed pattern. */
-	public Collection<TypedPattern> typedPattern;
-	
-	/** The typed tag. */
-	public Collection<TypedTag> typedTag;
-	
-	/** The name. */
-	public String name;
-	
-	/** The description. */
-	public String description;
-	
-	/** The constraint. */
-	public String constraint;
+    /** The name of the type. */
+    public String name;
+
+    /** A short description of what the type is about. */
+    public String description;
+
+    /**
+     * Rules that apply to all constructs using this type. It is recommended to
+     * use either plain text or OCL.
+     */
+    public String constraint;
+
+    /** The typed resource. */
+    public Collection<TypedResource> typedResource;
+
+    /** The typed pattern. */
+    public Collection<TypedPattern> typedPattern;
+
+    /** The typed tag. */
+    public Collection<TypedTag> typedTag;
 
 }

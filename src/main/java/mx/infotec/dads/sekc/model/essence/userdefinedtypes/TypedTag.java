@@ -23,10 +23,33 @@
  */
 package mx.infotec.dads.sekc.model.essence.userdefinedtypes;
 
-import mx.infotec.dads.sekc.model.essence.foundation.*;
+import mx.infotec.dads.sekc.model.essence.foundation.Tag;
 
 /**
- * The Class TypedTag.
+ * <pre>
+ * <b>Description: </b>
+ * </pre>
+ * 
+ * The Class TypedTag. A tag that has a user defined type.
+ * 
+ * <pre>
+ * 
+ * <b>Invariant:</b>
+ * 
+ * {@code
+ * true
+ * }
+ * </pre>
+ * 
+ * <pre>
+ * 
+ * <b>Semantics:</b>
+ * 
+ * Typed tags are used to ease interchange and consistent interpretation of tags across tools and organizations. Based on the
+ * type given to the tag, certain values can be expected to be used on a particular tag instance. Descriptions provided in the
+ * type of the tag can be displayed as introductory information to a list of all language elements tagged with this tag.
+ * 
+ * </pre>
  *
  * @author Daniel Cortes Pichardo
  * @version 1.1
@@ -34,7 +57,7 @@ import mx.infotec.dads.sekc.model.essence.foundation.*;
  */
 public class TypedTag extends Tag {
 
-    /** The kind. */
+    /** The user defined type associated with this tag. */
     public UserDefinedType kind;
 
 }
