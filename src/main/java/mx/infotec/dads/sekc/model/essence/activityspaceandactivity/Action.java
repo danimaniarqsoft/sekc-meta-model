@@ -49,15 +49,6 @@ import java.util.*;
  * 
  * <pre>
  * 
- * <b>Additional Operation:</b>
- * 
- * {@code
- * 
- * }
- * </pre>
- * 
- * <pre>
- * 
  * <b>Semantics:</b>
  * 
  * Activities may involve work products in different ways. In an action, one of four possible operations can be specified that

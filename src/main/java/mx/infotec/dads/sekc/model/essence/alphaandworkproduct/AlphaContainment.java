@@ -26,7 +26,34 @@ package mx.infotec.dads.sekc.model.essence.alphaandworkproduct;
 import mx.infotec.dads.sekc.model.essence.foundation.*;
 
 /**
- * The Class AlphaContainment.
+ * <pre>
+ * <b>Description: </b>
+ * </pre>
+ * 
+ * The Class AlphaContainment. Alpha association is used to represent a
+ * sub(ordinate)-alpha relationship between alphas.
+ * 
+ * <pre>
+ * 
+ * <b>Invariant:</b>
+ * 
+ * {@code
+ * true
+ * }
+ * </pre>
+ * 
+ * <pre>
+ * 
+ * <b>Semantics:</b>
+ * 
+ * The sub-alpha relationships define the graphs that show how the states of lower level, more granular alpha instances
+ * contribute to and drive the states of the higher level, more abstract, alpha instances.
+ * 
+ * The relationship between a sub(ordinate)-alpha and a super-alpha can, in general, be many-to-many. The ends of the
+ * relationship are modeled separately to indicate which is the sub(ordinate)-alpha and which is the super-alpha of the
+ * relationship.
+ * 
+ * </pre>
  *
  * @author Daniel Cortes Pichardo
  * @version 1.1
@@ -34,16 +61,16 @@ import mx.infotec.dads.sekc.model.essence.foundation.*;
  */
 public class AlphaContainment extends LanguageElement {
 
-    /** The super alpha. */
+    /** Lower bound for the number of instances of the sub(ordinate)-alpha. */
+    public int lowerBound;
+
+    /** Upper bound for the number of instances of the sub(ordinate)-alpha. */
+    public int upperBound;
+
+    /** The super alpha */
     public Alpha superAlpha;
-    
+
     /** The subordinate alpha. */
     public Alpha subordinateAlpha;
-    
-    /** The lower bound. */
-    public int lowerBound;
-    
-    /** The upper bound. */
-    public int upperBound;
 
 }

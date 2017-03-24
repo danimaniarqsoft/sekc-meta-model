@@ -28,11 +28,18 @@ package mx.infotec.dads.sekc.model.essence.activityspaceandactivity;
  * <b>Description: </b>
  * </pre>
  * 
- * The Enum ActionKind. Enumeration of all supported Actions.
+ * The Enum ActionKind. Enumeration of all supported Actions.<br><br>
  * 
+ * <b>create:</b> Indicates a create Action <br>
+ * <b>read:</b> Indicates a read Action<br>
+ * <b>update:</b> Indicates an update Action<br> 
+ * <b>delete:</b> Indicates a delete Action
  * <pre>
  * 
  * <b>Semantics:</b>
+ * 
+ * See clause 9.3.4.3 Action for a details on the indicated Actions.
+ * 
  * </pre>
  * 
  * @see Action for a details on the indicated Actions.

@@ -29,7 +29,66 @@ import mx.infotec.dads.sekc.model.essence.foundation.*;
 import java.util.*;
 
 /**
- * The Class Alpha.
+ * <pre>
+ * <b>Description: </b>
+ * </pre>
+ * 
+ * The Class Alpha. An essential element that is relevant to an assessment of
+ * the progress and health of a software engineering endeavor.
+ * 
+ * An alpha represents and holds the state of some element, aspect, or
+ * abstraction in an endeavor that has a discernible state and knowledge of
+ * whose state is required to understand the state of progress and/or health of
+ * the endeavor.
+ * 
+ * The instances of alphas in an endeavor form acyclic graphs. These graphs show
+ * how the states of lower level, more granular instances, contribute to and
+ * drive the states of the higher level, more abstract, alphas.
+ * 
+ * <pre>
+ * 
+ * <b>Invariant:</b>
+ * 
+ * {@code
+ * -- All states of an alpha must have different names.
+ * self.states->forAll(s1, s2 | s1 <> s2 implies s1.name <> s2.name)
+ * }
+ * </pre>
+ * 
+ * <pre>
+ * 
+ * <b>Semantics:</b>
+ * 
+ * Alpha is an acronym that means “Abstract-Level Progress Health Attribute.”
+ * 
+ * Alphas are subjects whose evolution we want to understand, monitor, direct, and control. The major milestones of a
+ * software engineering endeavor can be expressed in terms of the states of a collection of alphas. Thus, alpha state
+ * progression means progression towards achieving the objectives of the software engineering endeavor.
+ * 
+ * An alpha has well-defined states, defining a controlled evolution throughout its lifecycle – from its creation to its
+ * termination state. Each state has a collection of checkpoints that describe what the alpha should fulfill in this particular
+ * state. Hence it is possible to accurately plan and control their evolution through these states. However, these states are not
+ * just one-way linear progressions. Each time you reassess a state, if you do not meet all the checklist items, you can go
+ * back to a previous state. You can also iterate through the states multiple times depending on your choice of practices.
+ * The linear ordering of states just denotes the usual way of progression.
+ * 
+ * An alpha may be used as input to an activity space in which the content of the alpha is used when performing the work of
+ * the activity space. The alpha (and its state) may be created or updated during the performance of activities in an activity
+ * space.
+ * 
+ * An alpha is often manifested in terms of a collection of work products. These work products are used for documentation
+ * and presentation of the alpha. The shape of these work products may be used for concluding the state of the alpha.
+ * 
+ * Different practices may use different collections of work products to document the same alpha. For example, one practice
+ * may document all kinds of requirements in one document, while other practices may use different types of documents.
+ * One practice may document both the flow and the presentation of a use case in one document, while another practice may
+ * separate the specification of the flow from the specification of the user interface and write them in different documents.
+ * 
+ * An alpha may contain a collection of other alphas. Together, these sub-alphas contribute to the state of the superordinate
+ * alpha. However, there is no explicit relationship between the states of the subordinate alphas and the state of their
+ * superordinate alpha.
+ * 
+ * </pre>
  *
  * @author Daniel Cortes Pichardo
  * @version 1.1
@@ -37,22 +96,22 @@ import java.util.*;
  */
 public class Alpha extends BasicElement {
 
+    /** The states of the alpha. */
+    public Collection<State> states;
+
     /** The action. */
     public Collection<Action> action;
-    
+
     /** The activity space. */
     public ActivitySpace activitySpace;
-    
+
     /** The alpha containment. */
     public Collection<AlphaContainment> alphaContainment;
-    
+
     /** The alpha association. */
     public Collection<AlphaAssociation> alphaAssociation;
-    
+
     /** The work product manifest. */
     public Collection<WorkProductManifest> workProductManifest;
-    
-    /** The states. */
-    public Collection<State> states;
 
 }

@@ -29,7 +29,52 @@ import mx.infotec.dads.sekc.model.essence.foundation.*;
 import java.util.*;
 
 /**
- * The Class LevelOfDetail.
+ * <pre>
+ * <b>Description: </b>
+ * </pre>
+ * 
+ * The Class LevelOfDetail. A specification of the amount of detail or range of
+ * content in a work product. The level of detail of a work product is
+ * determined by evaluating checklist items.
+ * 
+ * <pre>
+ * 
+ * <b>Invariant:</b>
+ * 
+ * {@code
+ * -- All checkpoints of a level of detail must have different names
+ * self.checkListItem->forAll(i1, i2 | i1 <> i2 implies i1.name <> i2.name)
+ * 
+ * -- A level of detail may not be its own direct or indirect successor
+ * self.allSuccessors()->excludes(self)
+ * }
+ * </pre>
+ * 
+ * <pre>
+ * 
+ * <b>Additional Operation:</b>
+ * 
+ * {@code
+ * -- All successors of a level of detail
+ * context LevelOfDetail::allSuccessors : Set(LevelOfDetail)
+ * body: Set{self.successor}->union(self.successor.allSuccessors())
+ * }
+ * </pre>
+ * 
+ * <pre>
+ * 
+ * <b>Semantics:</b>
+ * 
+ * Levels of detail describe the amount and granularity of information that is present in a work product. For example, they
+ * allow to distinguish between a sketch of a system architecture, a formally modeled system architecture, and an annotated
+ * system architecture which is ready for code generation. It depends on the practice which of these levels is considered
+ * sufficiently detailed.
+ * 
+ * It is important to note that levels of detail are not concerned with the completeness of a work product. A work product
+ * can be considered complete for the purpose of the endeavor without being in the most advanced level of detail. In turn, a
+ * work product can be in the most advanced level of detail, but not yet been completed.
+ * 
+ * </pre>
  *
  * @author Daniel Cortes Pichardo
  * @version 1.1
@@ -37,28 +82,31 @@ import java.util.*;
  */
 public class LevelOfDetail extends LanguageElement {
 
-	/** The criterion. */
-	public Collection<Criterion> criterion;
-	
-	/** The predecessor. */
-	public LevelOfDetail predecessor;
-	
-	/** The work product. */
-	public WorkProduct workProduct;
-	
-	/** The successor. */
-	public LevelOfDetail successor;
-	
-	/** The check list item. */
-	public Collection<Checkpoint> checkListItem;
-	
-	/** The name. */
-	public String name;
-	
-	/** The is sufficient level. */
-	public boolean isSufficientLevel;
-	
-	/** The description. */
-	public String description;
+    /** A description of the level of detail. */
+    public String description;
+
+    /**
+     * Boolean value determined by the practice (author) to indicate the
+     * sufficient level of detail. Name of the level of detail.
+     */
+    public boolean isSufficientLevel;
+
+    /** Name of the level of detail. */
+    public String name;
+
+    /** Checklist items to determine if the level of detail has been reached. */
+    public Collection<Checkpoint> checkListItem;
+
+    /** Next level of detail. */
+    public LevelOfDetail successor;
+
+    /** The criterion. */
+    public Collection<Criterion> criterion;
+
+    /** The predecessor. */
+    public LevelOfDetail predecessor;
+
+    /** The work product. */
+    public WorkProduct workProduct;
 
 }

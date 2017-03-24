@@ -26,7 +26,35 @@ package mx.infotec.dads.sekc.model.essence.alphaandworkproduct;
 import mx.infotec.dads.sekc.model.essence.foundation.*;
 
 /**
- * The Class WorkProductManifest.
+ * <pre>
+ * <b>Description: </b>
+ * </pre>
+ * 
+ * The Class WorkProductManifest. A work product manifest binds a work product
+ * to an alpha.
+ * 
+ * <pre>
+ * 
+ * <b>Invariant:</b>
+ * 
+ * {@code
+ * true
+ * }
+ * }
+ * </pre>
+ * 
+ * <pre>
+ * 
+ * <b>Semantics:</b>
+ * 
+ * Work product manifest represents a tri-nary relationship. It is a relationship from a practice to a work product which is
+ * used for describing an alpha. Several work products may be bound to the same alpha, i.e., there may be multiple alpha
+ * manifests within a practice binding a specific alpha to different work products.
+ * 
+ * For each work product manifest, there is a multiplicity stating how many instances there should be of the associated work
+ * product describing one instance of the alpha.
+ * 
+ * </pre>
  *
  * @author Daniel Cortes Pichardo
  * @version 1.1
@@ -34,16 +62,22 @@ import mx.infotec.dads.sekc.model.essence.foundation.*;
  */
 public class WorkProductManifest extends LanguageElement {
 
-    /** The alpha. */
-    public Alpha alpha;
-    
-    /** The work product. */
-    public WorkProduct workProduct;
-    
-    /** The lower bound. */
+    /**
+     * Lower bound for the number of instances of the work product associated to
+     * one instance of the alpha.
+     */
     public int lowerBound;
-    
-    /** The upper bound. */
+
+    /**
+     * Upper bound for the number of instances of the work product associated to
+     * one instance of the alpha.
+     */
     public int upperBound;
+
+    /** The alpha bound by this manifest. */
+    public Alpha alpha;
+
+    /** The work product bound by this manifest. */
+    public WorkProduct workProduct;
 
 }

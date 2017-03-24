@@ -29,7 +29,44 @@ import mx.infotec.dads.sekc.model.essence.foundation.*;
 import java.util.*;
 
 /**
- * The Class State.
+ * <pre>
+ * <b>Description: </b>
+ * </pre>
+ * 
+ * The Class State. A specification of the state of progress of an alpha. The
+ * state of an alpha is determined by evaluating checklist items.
+ * 
+ * <pre>
+ * 
+ * <b>Invariant:</b>
+ * 
+ * {@code
+ * -- All checkpoints of a state must have different names
+ * self.checkListItem->forAll(i1, i2 | i1 <> i2 implies i1.name <> i2.name)
+ * 
+ * -- A state may not be its own direct or indirect successor
+ * self.allSuccessors()->excludes(self)
+ * }
+ * </pre>
+ * 
+ * <pre>
+ * 
+ * <b>Additional Operation:</b>
+ * 
+ * {@code
+ * -- All successors of a state
+ * context State::allSuccessors : Set(State)
+ * body: Set{self.successor}->union(self.successor.allSuccessors())
+ * }
+ * </pre>
+ * 
+ * <pre>
+ * 
+ * <b>Semantics:</b>
+ * 
+ * A state expresses a situation in which all its associated checklist items are fulfilled. It is considered to be an important
+ * and remarkable step in the lifecycle of an alpha.
+ * </pre>
  *
  * @author Daniel Cortes Pichardo
  * @version 1.1
@@ -37,25 +74,25 @@ import java.util.*;
  */
 public class State extends LanguageElement {
 
-	/** The criterion. */
-	public Collection<Criterion> criterion;
-	
-	/** The alpha. */
-	public Alpha alpha;
-	
-	/** The predecessor. */
-	public State predecessor;
-	
-	/** The check list item. */
-	public Collection<Checkpoint> checkListItem;
-	
-	/** The successor. */
-	public State successor;
-	
-	/** The name. */
-	public String name;
-	
-	/** The description. */
-	public String description;
+    /** The name of the state. */
+    public String name;
+
+    /** Some additional information about the state. */
+    public String description;
+
+    /** A collection of checkpoints associated with the state. */
+    public Collection<Checkpoint> checkListItem;
+
+    /** The successor state. */
+    public State successor;
+
+    /** The criterion. */
+    public Collection<Criterion> criterion;
+
+    /** The alpha. */
+    public Alpha alpha;
+
+    /** The predecessor. */
+    public State predecessor;
 
 }

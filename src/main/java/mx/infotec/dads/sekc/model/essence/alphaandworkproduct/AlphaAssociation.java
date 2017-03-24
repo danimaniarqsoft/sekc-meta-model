@@ -26,7 +26,35 @@ package mx.infotec.dads.sekc.model.essence.alphaandworkproduct;
 import mx.infotec.dads.sekc.model.essence.foundation.*;
 
 /**
- * The Class AlphaAssociation.
+ * <pre>
+ * <b>Description: </b>
+ * </pre>
+ * 
+ * The Class AlphaAssociation. Alpha association is used to represent a
+ * relationship between alphas. Generally these associations are defined by a
+ * practice.
+ * 
+ * <pre>
+ * 
+ * <b>Invariant:</b>
+ * 
+ * {@code
+ * true
+ * }
+ * </pre>
+ * 
+ * <pre>
+ * 
+ * <b>Semantics:</b>
+ * 
+ * Unlike a relationship between alphas defined using alpha containment, which is used for the Essence “sub-alpha”
+ * relationship, a relationship between alphas defined using alpha association has no defined semantics in Essence. An
+ * example would be between a Risk and the Team Member who identified the Risk. While Risk Management practice
+ * might recommend that this relationship be tracked, it is not a sub-alpha relationship.
+ * 
+ * A relationship modeled by an alpha association can, in general, be many-to-many.
+ * 
+ * </pre>
  *
  * @author Daniel Cortes Pichardo
  * @version 1.1
@@ -34,25 +62,24 @@ import mx.infotec.dads.sekc.model.essence.foundation.*;
  */
 public class AlphaAssociation extends LanguageElement {
 
-    /** The end 2. */
-    public Alpha end2;
-    
-    /** The end 1. */
-    public Alpha end1;
-    
-    /** The name. */
-    public String name;
-    
-    /** The end 1 lower bound. */
+    /** Lower bound of association endpoint 1. */
     public int end1lowerBound;
-    
-    /** The end 1 upper bound. */
+
+    /** Upper bound of association endpoint 1. */
     public int end1upperBound;
-    
-    /** The end 2 lower bound. */
+
+    /** Lower bound of association endpoint 2. */
     public int end2lowerBound;
-    
-    /** The end 2 upper bound. */
+
+    /** Upper bound of association endpoint 2. */
     public int end2upperBound;
 
+    /** Name of the alpha association. */
+    public String name;
+
+    /** The alpha endpoint 1 of the association. */
+    public Alpha end1;
+
+    /** The alpha endpoint 2 of the association. */
+    public Alpha end2;
 }
