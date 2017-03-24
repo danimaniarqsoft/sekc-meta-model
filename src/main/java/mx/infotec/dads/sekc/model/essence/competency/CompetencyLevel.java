@@ -30,7 +30,34 @@ import mx.infotec.dads.sekc.model.essence.foundation.Checkpoint;
 import mx.infotec.dads.sekc.model.essence.foundation.LanguageElement;
 
 /**
- * The Class CompetencyLevel.
+ * <pre>
+ * <b>Description: </b>
+ * </pre>
+ * 
+ * The Class CompetencyLevel. A competency level defines a level of how
+ * competent or able a team member is with respect to the abilities,
+ * capabilities, attainments, knowledge, or skills defined by the respective
+ * competency.
+ * 
+ * <pre>
+ * 
+ * <b>Invariant:</b>
+ * 
+ * {@code
+ * true
+ * }
+ * </pre>
+ * 
+ * <pre>
+ * 
+ * <b>Semantics:</b>
+ * 
+ * Competency levels are used to create a range of abilities from poor to excellent or small scale to large scale. While a
+ * competency describes what capabilities are needed (such as “Analyst” or “Developer”), a competency level adds a
+ * qualitative grading to them. Typically, the levels range from 0 – no competence to 5 – expert. (such as “basic”,
+ * “advanced”, or “excellent”).
+ * 
+ * </pre>
  *
  * @author Daniel Cortes Pichardo
  * @version 1.1
@@ -38,22 +65,25 @@ import mx.infotec.dads.sekc.model.essence.foundation.LanguageElement;
  */
 public class CompetencyLevel extends LanguageElement {
 
+    /** The name of the competency level */
+    public String name;
+
+    /** A short description of what the competency level is */
+    public String briefDescription;
+
+    /**
+     * A numeric indicator for the level, where a higher number means
+     * more/better competence.
+     */
+    public int level;
+
     /** The activity. */
     public Collection<Activity> activity;
-    
+
     /** The competency. */
     public Competency competency;
-    
+
     /** The checklist item. */
     public Collection<Checkpoint> checklistItem;
-    
-    /** The name. */
-    public String name;
-    
-    /** The brief description. */
-    public String briefDescription;
-    
-    /** The level. */
-    public int level;
 
 }

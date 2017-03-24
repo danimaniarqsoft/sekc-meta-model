@@ -28,7 +28,35 @@ import java.util.*;
 import mx.infotec.dads.sekc.model.essence.foundation.*;
 
 /**
- * The Class Competency.
+ * <pre>
+ * <b>Description: </b>
+ * </pre>
+ * 
+ * The Class Competency. A competency encompasses the abilities, capabilities,
+ * attainments, knowledge, and skills necessary to do a certain kind of work. It
+ * is assumed that for each team member a level of competency for each
+ * individual competency can be named or determined.
+ * 
+ * <pre>
+ * 
+ * <b>Invariant:</b>
+ * 
+ * {@code
+ * -- The possible levels are distinct
+ * self.possibleLevel->forAll (l1, l2 | l1 <> l2 implies (l1.level <> l2.level and
+ * l1.name <> l2.name))
+ * }
+ * </pre>
+ * 
+ * <b>Semantics:</b>
+ * 
+ * A competency is used for defining a capability of being able to work in a
+ * specific area. In the same way as an Alpha is an abstract thing to monitor
+ * and control and an Activity Space is an abstraction of what to do, a
+ * Competency is an abstract collection of knowledge, abilities, attitudes, and
+ * skills needed to perform a certain kind of work.
+ * 
+ * </pre>
  *
  * @author Daniel Cortes Pichardo
  * @version 1.1
@@ -36,7 +64,7 @@ import mx.infotec.dads.sekc.model.essence.foundation.*;
  */
 public class Competency extends BasicElement {
 
-    /** The possible level. */
+    /** A collection of levels defined for this competency. */
     public Collection<CompetencyLevel> possibleLevel;
 
 }
