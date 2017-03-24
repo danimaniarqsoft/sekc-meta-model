@@ -28,14 +28,17 @@ import java.util.*;
 import mx.infotec.dads.sekc.model.essence.foundation.*;
 
 /**
- * The Class ViewSelection selects a subset of constructs and construct features
- * such as attributes and associations
+ * <pre>
+ * <b>Description: </b>
+ * </pre>
  * 
- * Invariant
- * 
- * *
+ * The Class ViewSelection. A ViewSelection selects a subset of constructs and
+ * construct features such as attributes and associations.
  * 
  * <pre>
+ * 
+ * <b>Invariant:</b>
+ * 
  * {@code
  * -- The featureSelections in a ViewSelection V refers to constructs that are
  * part of constructSelections in V. self.featureSelection->forAll(fs |
@@ -43,28 +46,48 @@ import mx.infotec.dads.sekc.model.essence.foundation.*;
  * }
  * </pre>
  * 
+ * <pre>
+ * 
+ * <b>Semantics:</b>
+ * 
+ * A feature selection names a feature (property or association) from a language construct which is to be included in a view.
+ * The feature is identified by its name, since property and association names are unique within a language element. If a
+ * feature with the given name does not exist, this feature selection does not contribute anything to the view.
+ * 
+ * </pre>
+ *
  * @author Daniel Cortes Pichardo
  * @version 1.1
  * @since essence 1.1
  */
 public class ViewSelection extends LanguageElement {
 
-    /** The name of the view */
+    /** The name of the view. */
     public String name;
 
-    /** A description of the view, including the purpose of the view */
+    /** A description of the view, including the purpose of the view. */
     public String description;
 
     /** The referring view selection. */
     public Collection<ViewSelection> referringViewSelection;
 
-    /** The construct selection. */
+    /**
+     * The selected constructs (such as Alpha, State, etc) to be included in the
+     * view.
+     */
     public Collection<LanguageElement> constructSelection;
 
-    /** The included view selection. */
+    /**
+     * ViewSelections to be included in this ViewSelection (provides a means to
+     * build extended and more sophisticated views based on existing/smaller
+     * views)
+     */
     public Collection<ViewSelection> includedViewSelection;
 
-    /** The feature selection. */
+    /**
+     * The selected features, such as attributes and associations of constructs
+     * to be included in the view.
+     */
     public Collection<FeatureSelection> featureSelection;
 
 }

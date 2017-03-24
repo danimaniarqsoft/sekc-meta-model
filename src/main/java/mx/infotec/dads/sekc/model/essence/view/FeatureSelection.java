@@ -28,11 +28,32 @@ import java.util.*;
 import mx.infotec.dads.sekc.model.essence.foundation.*;
 
 /**
+ * <pre>
+ * <b>Description: </b>
+ * </pre>
+ * 
  * The Class FeatureSelection. A reference to a construct feature such as a
  * particular attribute or association.
- *
- * Invariant true
  * 
+ * <pre>
+ * 
+ * <b>Invariant:</b>
+ * 
+ * {@code
+ * true
+ * }
+ * </pre>
+ * 
+ * <pre>
+ * 
+ * <b>Semantics:</b>
+ * 
+ * A feature selection names a feature (property or association) from a language construct which is to be included in a view.
+ * The feature is identified by its name, since property and association names are unique within a language element. If a
+ * feature with the given name does not exist, this feature selection does not contribute anything to the view.
+ * 
+ * </pre>
+ *
  * @author Daniel Cortes Pichardo
  * @version 1.1
  * @since essence 1.1
