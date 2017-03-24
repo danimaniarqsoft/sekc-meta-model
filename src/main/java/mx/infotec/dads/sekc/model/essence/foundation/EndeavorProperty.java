@@ -24,7 +24,32 @@
 package mx.infotec.dads.sekc.model.essence.foundation;
 
 /**
- * The Class EndeavorProperty.
+ * <pre>
+ * <b>Description: </b>
+ * </pre>
+ * 
+ * The Class EndeavorProperty. An element to represent properties that you want
+ * to track during an endeavor. Each property can either be simple or be
+ * expressed via an association.
+ * 
+ * <pre>
+ * 
+ * <b>Invariant:</b>
+ * 
+ * {@code
+ * true
+ * }
+ * </pre>
+ * 
+ * <pre>
+ * 
+ * <b>Semantics:</b>
+ *
+ * Endeavor properties are used to track individual properties of actual instances of elements during an endeavor. Endeavor
+ * properties can be defined individually for language elements. See 9.5 for the minimal set of endeavor properties that is
+ * used by the dynamic semantics of Essence.
+ * 
+ * </pre>
  *
  * @author Daniel Cortes Pichardo
  * @version 1.1
@@ -34,23 +59,26 @@ public class EndeavorProperty {
 
     /** The language element. */
     public LanguageElement languageElement;
-    
-    /** The association. */
+
+    /**
+     * The association used to express this property if it is not a simple
+     * property.
+     */
     public EndeavorAssociation association;
-    
-    /** The owning association. */
+
+    /** The association owning this property */
     public EndeavorAssociation owningAssociation;
-    
-    /** The type. */
+
+    /** The type of the property */
     public Type type;
-    
-    /** The name. */
+
+    /** Name of the property */
     public String name;
-    
-    /** The lower bound. */
+
+    /** Lower bound of the property */
     public int lowerBound;
-    
-    /** The upper bound. */
+
+    /** Upper bound of the property */
     public int upperBound;
 
 }

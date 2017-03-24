@@ -27,7 +27,37 @@ import mx.infotec.dads.sekc.model.essence.alphaandworkproduct.*;
 import mx.infotec.dads.sekc.model.essence.competency.*;
 
 /**
- * The Class Checkpoint.
+ * <pre>
+ * <b>Description: </b>
+ * </pre>
+ * 
+ * The Class Checkpoint. A condition that can be tested as true or false that
+ * contributes to the determination of whether a state (of an alpha) or a level
+ * of detail (of a work product) or a competency level has been attained.
+ * 
+ * <pre>
+ * 
+ * <b>Invariant:</b>
+ * 
+ * {@code
+ * true
+ * }
+ * </pre>
+ * 
+ * <pre>
+ * 
+ * <b>Semantics:</b>
+ * 
+ * Checkpoints are used as follows:
+ * </pre>
+ * <ul>
+ * <li>The checkpoints of an alpha state are joined by AND. The state of an
+ * alpha is deemed to be the most advanced (favourable) state for which all
+ * checkpoints are true.</li>
+ * <li>The checkpoints of a work product level of detail are joined by OR. The
+ * level of detail of a work product is deemed to be the most detailed level for
+ * which at least one checkpoint is true.</li>
+ * </ul>
  *
  * @author Daniel Cortes Pichardo
  * @version 1.1
@@ -35,19 +65,22 @@ import mx.infotec.dads.sekc.model.essence.competency.*;
  */
 public class Checkpoint extends LanguageElement {
 
+    /** The name of the checkpoint. */
+    public String name;
+
+    /** A description of the checkpoint. */
+    public String description;
+
+    /** An optional abbreviated version of the full description. */
+    public String shortDescription;
+
     /** The level. */
     public LevelOfDetail level;
-    
+
     /** The state. */
     public State state;
-    
+
     /** The competency level. */
     public CompetencyLevel competencyLevel;
-    
-    /** The name. */
-    public String name;
-    
-    /** The description. */
-    public String description;
 
 }

@@ -24,7 +24,33 @@
 package mx.infotec.dads.sekc.model.essence.foundation;
 
 /**
- * The Class ExtensionElement.
+ * <pre>
+ * <b>Description: </b>
+ * </pre>
+ * 
+ * The Class ExtensionElement. An element that extends a language element by
+ * replacing the content of one of its attributes
+ * 
+ * <pre>
+ * 
+ * <b>Invariant:</b>
+ * 
+ * {@code
+ * -- The target element may not be an extension element or merge resolution
+ * not self.targetElement.oclIsKindOf(ExtensionElement) and not
+ * self.targetElement.oclIsKindOf(MergeResolution)
+ * }
+ * </pre>
+ * 
+ * <pre>
+ * 
+ * <b>Semantics:</b>
+ * 
+ * If an extension X is associated with a target element T and referenced by element group C, then when T is viewed in C,
+ * what is seen is T modified by X by applying extension functions to the attributes of T. See 9.4 for the detailed
+ * mechanism.
+ * 
+ * </pre>
  *
  * @author Daniel Cortes Pichardo
  * @version 1.1
@@ -34,14 +60,14 @@ public class ExtensionElement extends LanguageElement {
 
     /** The element group. */
     public ElementGroup elementGroup;
-    
-    /** The target element. */
+
+    /** The element to be extended */
     public LanguageElement targetElement;
-    
-    /** The target attribute. */
+
+    /** The name of the attribute which is to be extended */
     public String targetAttribute;
-    
-    /** The extension function. */
+
+    /** The function applied to the target attribute */
     public String extensionFunction;
 
 }

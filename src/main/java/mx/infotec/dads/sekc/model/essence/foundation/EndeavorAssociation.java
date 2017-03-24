@@ -58,10 +58,10 @@ import java.util.*;
  */
 public class EndeavorAssociation {
 
-    /** The owned end. */
+    /** The properties of this association */
     public Collection<EndeavorProperty> ownedEnd;
 
-    /** The member end. */
+    /** End properties of the association */
     public Collection<EndeavorProperty> memberEnd;
 
 }

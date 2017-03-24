@@ -48,6 +48,7 @@ import mx.infotec.dads.sekc.model.essence.foundation.*;
  * }
  * </pre>
  * 
+ * <pre>
  * <b>Semantics:</b>
  * 
  * A competency is used for defining a capability of being able to work in a

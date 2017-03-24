@@ -31,6 +31,7 @@ import mx.infotec.dads.sekc.model.essence.GraphicalElement;
  * <pre>
  * <b>Description: </b>
  * </pre>
+ * 
  * The Abstract Class ElementGroup. A generic name for an Essence concept that
  * names a collection of elements. Element groups are recursive, so a group may
  * own other groups, as well as other (non-group) elements.
@@ -47,6 +48,33 @@ import mx.infotec.dads.sekc.model.essence.GraphicalElement;
  * self.extensions->forAll(e | self.allElements(e.targetElement.oclType())->includes(e.targetElement))
  * }
  * </pre>
+ * 
+ * <pre>
+ * <b>Additional Operations:</b>
+ * 
+ * {@code
+ * -- Get all elements of a particular type which are available within this group
+ * and its referenced groups.
+ * context ElementGroup::allElements (t : OclType) : Set(t)
+ * body: self.referredElements->select(e | e.oclIsKindOf(t))
+ * ->union(self.allElements(ElementGroup)->collect(c | c.allElements(t))
+ * ->union(self.ownedElements->select(e | e.oclIsKindOf(t)))
+ * }
+ * </pre>
+ * 
+ * <pre>
+ * <b>Semantics:</b>
+ * 
+ * Element groups are used to organize Essence elements into meaningful collections such as Kernels or Practices. Elements
+ * in a particular group belong together for some reason, while elements outside that group do not belong to them. The
+ * reasoning for including elements in the group should be given in the description attribute of the group.
+ * 
+ * Element groups can own their members by reference or by value. 
+ * 
+ * If an element group owns two or more members of the same type and name, composition (cf. 9.4) is applied to them so
+ * that only one merged element of that type with that name is visible when viewing the contents of the element group.
+ * </pre>
+ * 
  * 
  * @author Daniel Cortes Pichardo
  * @version 1.1
@@ -80,10 +108,10 @@ public abstract class ElementGroup extends LanguageElement {
     /** The merge resolution. */
     public Collection<MergeResolution> mergeResolution;
 
-    /** The owned elements. */
+    /** The language elements this group owns by value */
     public Collection<LanguageElement> ownedElements;
 
-    /** The referred elements. */
+    /** The language elements this group owns by reference */
     public Collection<LanguageElement> referredElements;
 
     /** The extension. */

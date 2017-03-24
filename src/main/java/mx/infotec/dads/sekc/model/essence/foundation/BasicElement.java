@@ -26,13 +26,36 @@ package mx.infotec.dads.sekc.model.essence.foundation;
 import mx.infotec.dads.sekc.model.essence.GraphicalElement;
 
 /**
- * Abstract superclass for all main concepts in Essence other than Element
- * groups.
+ * <pre>
+ * <b>Description: </b>
+ * </pre>
+ * 
+ * The Class BasicElement. Abstract superclass for all main concepts in Essence
+ * other than Element groups.
+ * 
+ * <pre>
+ * 
+ * <b>Invariant:</b>
+ * 
+ * {@code
+ * true
+ * }
+ * </pre>
+ * 
+ * <pre>
+ * 
+ * <b>Semantics:</b>
+ * 
+ * Basic elements are considered to represent the small set of main concepts within Essence. Basic elements are most likely
+ * the first elements of Essence a user interacts with.
+ * 
+ * Elements of Essence which are no basic elements (and no element groups) are considered to be auxiliary elements used
+ * to detail or connect basic elements.
+ * 
+ * </pre>
  *
  * @author Daniel Cortes Pichardo
  * @version 1.1
- * @see LanguageElement
- * 
  * @since essence 1.1
  */
 public abstract class BasicElement extends LanguageElement {
