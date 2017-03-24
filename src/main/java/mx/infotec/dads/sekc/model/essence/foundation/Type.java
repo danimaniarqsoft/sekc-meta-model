@@ -26,7 +26,35 @@ package mx.infotec.dads.sekc.model.essence.foundation;
 import java.util.*;
 
 /**
- * The Class Type.
+ * <pre>
+ * <b>Description: </b>
+ * </pre>
+ * 
+ * The Class Type. Not defined into the standard
+ * 
+ * <pre>
+ * 
+ * <b>Invariant:</b>
+ * 
+ * {@code
+ * }
+ * </pre>
+ * 
+ * <pre>
+ * 
+ * <b>Additional Operation:</b>
+ * 
+ * {@code
+ * 
+ * }
+ * </pre>
+ * 
+ * <pre>
+ * 
+ * <b>Semantics:</b>
+ * 
+ * 
+ * </pre>
  *
  * @author Daniel Cortes Pichardo
  * @version 1.1
@@ -36,7 +64,7 @@ public class Type {
 
     /** The property. */
     public Collection<EndeavorProperty> property;
-    
+
     /** The name. */
     public String name;
 

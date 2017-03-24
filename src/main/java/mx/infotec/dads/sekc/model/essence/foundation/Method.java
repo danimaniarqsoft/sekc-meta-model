@@ -24,7 +24,42 @@
 package mx.infotec.dads.sekc.model.essence.foundation;
 
 /**
- * The Class Method.
+ * <pre>
+ * <b>Description: </b>
+ * </pre>
+ * 
+ * The Class Method. A Method is the composition of a Kernel and a set of
+ * Practices to fulfill a specific purpose.
+ * 
+ * <pre>
+ * 
+ * <b>Invariant:</b>
+ * 
+ * {@code
+ * -- A method can only contain practices.
+ * self.referredElements->forAll (e | e.oclIsKindOf(Practice)) and
+ * self.ownedElements->forAll (e | e.oclIsKindOf(Practice))
+ * }
+ * </pre>
+ * 
+ * <pre>
+ * 
+ * <b>Semantics:</b>
+ * 
+ * A method contains a set of practices to express the practitioners’ way of working in order to fulfill a specific purpose. The
+ * method purpose should consider the stakeholder needs, particular conditions, and the desired software product. The set of
+ * practices that makes up a method should contribute and be sufficient to the achievement of this purpose.
+ * 
+ * For example, a method purpose can be related to developing, maintaining, or integrating a software product.
+ * 
+ * The set of practices, that articulate a method, should satisfy the coherence, consistency, and completeness properties. The
+ * set of practices is coherent if the objective of each practice contributes to the entire method purpose, is consistent if each
+ * of its entries and results are interrelated and useful. Finally, it is complete if the achievement of all practice objectives
+ * fulfills entirely the method purpose and produces expected output.
+ * 
+ * Those properties are most likely not true from the beginning while authoring a method.
+ * 
+ * </pre>
  *
  * @author Daniel Cortes Pichardo
  * @version 1.1
@@ -32,10 +67,15 @@ package mx.infotec.dads.sekc.model.essence.foundation;
  */
 public class Method extends ElementGroup {
 
-    /** The base kernel. */
-    public Kernel baseKernel;
-    
-    /** The purpose. */
+    /**
+     * The purpose of this Method. The content of this attribute should be an
+     * explicit short statement that describes the goal that the method pursues.
+     * Additional explanations can be given in the attribute “description”
+     * inherited from “ElementGroup”.
+     */
     public String purpose;
+
+    /** The Kernel this Method is based on */
+    public Kernel baseKernel;
 
 }

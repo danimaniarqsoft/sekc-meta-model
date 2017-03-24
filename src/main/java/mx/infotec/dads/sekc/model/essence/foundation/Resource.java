@@ -24,7 +24,36 @@
 package mx.infotec.dads.sekc.model.essence.foundation;
 
 /**
- * The Class Resource.
+ * <pre>
+ * <b>Description: </b>
+ * </pre>
+ * 
+ * The Class Resource. A source of information or content, such as a website,
+ * that is outside the Essence model and referenced from it, for instance by a
+ * URL
+ * 
+ * <pre>
+ * 
+ * <b>Invariant:</b>
+ * 
+ * {@code
+ * true
+ * }
+ * </pre>
+ * 
+ * <pre>
+ * 
+ * <b>Semantics:</b>
+ * 
+ * Resources are used to make information available from an Essence model without translating this information into terms
+ * of Essence elements and their attributes explicitly. This can for instance be used if the formal model should be kept small
+ * for some reason while storing additional information informally in resources. It can also be used if a complex practice or
+ * method is to be adopted partially in Essence, while the full practice or method description lives as an external resource
+ * outside the Essence model.
+ * 
+ * Resources are also used to attach external objects like templates, tools, study material, or similar to language elements.
+ * 
+ * </pre>
  *
  * @author Daniel Cortes Pichardo
  * @version 1.1
@@ -32,10 +61,13 @@ package mx.infotec.dads.sekc.model.essence.foundation;
  */
 public class Resource extends LanguageElement {
 
-    /** The language element. */
-    public LanguageElement languageElement;
-    
-    /** The content. */
+    /**
+     * A reference to the content of the resource. The reference can be provided
+     * in any suitable way, e.g., as a hyperlink or as a full text document.
+     */
     public String content;
+
+    /** The language element */
+    public LanguageElement languageElement;
 
 }

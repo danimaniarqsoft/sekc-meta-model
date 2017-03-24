@@ -24,7 +24,33 @@
 package mx.infotec.dads.sekc.model.essence.foundation;
 
 /**
- * The Class PracticeAsset.
+ * <pre>
+ * <b>Description: </b>
+ * </pre>
+ * 
+ * The Class PracticeAsset. A practice asset is a container that names a
+ * collection of language element that are no element groups.
+ * 
+ * <pre>
+ * 
+ * <b>Invariant:</b>
+ * 
+ * {@code
+ * -- A practice asset may not own element groups
+ * self.referredElements->forAll(e | not e.oclIsKindOf(ElementGroup)) and
+ * self.ownedElements.>forAll(e | not e.oclIsKindOf(ElementGroup))
+ * }
+ * </pre>
+ * 
+ * <pre>
+ * 
+ * <b>Semantics:</b>
+ * 
+ *A practice asset contains elements intended to be reused while building practices. Different to a kernel, the elements in a
+ *practice asset do not necessarily form a common ground or vocabulary. Different to a practice, the elements in a practice
+ *asset do not necessarily address a particular problem or provide explicit guidance.
+ *
+ * </pre>
  *
  * @author Daniel Cortes Pichardo
  * @version 1.1

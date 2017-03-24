@@ -24,7 +24,34 @@
 package mx.infotec.dads.sekc.model.essence.foundation;
 
 /**
- * The Class Tag.
+ * <pre>
+ * <b>Description: </b>
+ * </pre>
+ * 
+ * The Class Tag. A non-empty label that can be attached to a language element.
+ * 
+ * <pre>
+ * 
+ * <b>Invariant:</b>
+ * 
+ * {@code
+ * -- Value may not be empty
+ * not self.value.isEmpty()
+ * }
+ * </pre>
+ * 
+ * <pre>
+ * 
+ * <b>Semantics:</b>
+ * 
+ * Tagging allows to add user defined or tool specific information to any language element. It is up to the user or tool
+ * vendor who applied the tags to define tagging schemes and interpret them. Examples for tagging include author tags,
+ * version tags, and categorization into areas of concern like “endeavor space”, “customer space”, and “solution space”.
+ * 
+ * Note that this element is untyped and thus does not have a name attribute. For typed tags suitable for key-value-pairs and
+ * tags with empty values see 9.3.6.4.
+ * 
+ * </pre>
  *
  * @author Daniel Cortes Pichardo
  * @version 1.1
@@ -32,10 +59,10 @@ package mx.infotec.dads.sekc.model.essence.foundation;
  */
 public class Tag extends LanguageElement {
 
+    /** The Value of the tag. */
+    public String value;
+
     /** The language element. */
     public LanguageElement languageElement;
-    
-    /** The value. */
-    public String value;
 
 }

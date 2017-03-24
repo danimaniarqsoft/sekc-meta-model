@@ -24,7 +24,39 @@
 package mx.infotec.dads.sekc.model.essence.foundation;
 
 /**
- * The Class Library.
+ * <pre>
+ * <b>Description: </b>
+ * </pre>
+ * 
+ * The Class Library. A library is a container that names a collection of
+ * element groups.
+ * 
+ * <pre>
+ * 
+ * <b>Invariant:</b>
+ * 
+ * {@code
+ * -- A library may only own element groups
+ * self.referredElements->forAll(e | e.oclIsKindOf(ElementGroup)) and
+ * self.ownedElements->forAll(e | e.oclIsKindOf(ElementGroup))
+ * }
+ * </pre>
+ * 
+ * <pre>
+ * 
+ * <b>Additional Operation:</b>
+ * 
+ * {@code
+ * 
+ * }
+ * </pre>
+ * 
+ * <pre>
+ * 
+ * <b>Semantics:</b>
+ * 
+ * 
+ * </pre>
  *
  * @author Daniel Cortes Pichardo
  * @version 1.1

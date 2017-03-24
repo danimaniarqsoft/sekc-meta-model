@@ -26,7 +26,37 @@ package mx.infotec.dads.sekc.model.essence.foundation;
 import java.util.*;
 
 /**
- * The Class Pattern.
+ * <pre>
+ * <b>Description: </b>
+ * </pre>
+ * 
+ * The Class Pattern. A pattern is a generic mechanism for naming complex
+ * concepts that are made up of several Essence elements. A pattern is defined
+ * in terms of pattern associations.
+ * 
+ * <pre>
+ * 
+ * <b>Invariant:</b>
+ * 
+ * {@code
+ * true
+ * }
+ * </pre>
+ * 
+ * <pre>
+ * 
+ * <b>Semantics:</b>
+ * 
+ * Pattern is a general mechanism for defining a structure of language elements. Typically, the pattern references other
+ * elements in a practice or kernel. For example, a role may be defined by referencing required competencies, having
+ * responsibility of work products, and participation in activities. Another example could be a phase which groups activity
+ * spaces that should be performed during that phase.
+ * 
+ * Patterns can also be used to model complex conditions. For example, a pattern for pre-conditions can create associations
+ * to activities, work products and level of detail to express that particular work products must be present in at least the
+ * designated levels of detail to be ready to start the particular activities.
+ * 
+ * </pre>
  *
  * @author Daniel Cortes Pichardo
  * @version 1.1
@@ -34,7 +64,7 @@ import java.util.*;
  */
 public class Pattern extends BasicElement {
 
-    /** The association. */
+    /** Named association types between elements */
     public Collection<PatternAssociation> association;
 
 }

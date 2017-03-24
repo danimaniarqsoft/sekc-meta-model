@@ -24,7 +24,32 @@
 package mx.infotec.dads.sekc.model.essence.foundation;
 
 /**
- * The Class MergeResolution.
+ * <pre>
+ * <b>Description: </b>
+ * </pre>
+ * 
+ * The Class MergeResolution. An element that provides a solution for a merge
+ * conflict as defined in 9.4.4.3. of the standard
+ * 
+ * <pre>
+ * 
+ * <b>Invariant:</b>
+ * 
+ * {@code
+ * true
+ * }
+ * </pre>
+ * 
+ * <pre>
+ * 
+ * <b>Semantics:</b>
+ * 
+ * If an element group refers to more than one element with the same name, these elements are merged when viewing the
+ * content of this element group. For each conflicting attribute on the merged objects, a merge resolution must be defined. It
+ * applies a resolution function to the conflicting attributes and returns the attribute value to be used as resolution. See 9.4
+ * for the detailed mechanism.
+ * 
+ * </pre>
  *
  * @author Daniel Cortes Pichardo
  * @version 1.1
@@ -32,16 +57,16 @@ package mx.infotec.dads.sekc.model.essence.foundation;
  */
 public class MergeResolution extends LanguageElement {
 
+    /** The name of the attribute on which the conflict is solved. */
+    public String targetAttribute;
+
+    /** The name of the element on which the conflict is solved. */
+    public String targetName;
+
+    /** The function applied to the target attribute. */
+    public String resolutionFunction;
+
     /** The element group. */
     public ElementGroup elementGroup;
-    
-    /** The target name. */
-    public String targetName;
-    
-    /** The target attribute. */
-    public String targetAttribute;
-    
-    /** The resolution function. */
-    public String resolutionFunction;
 
 }
