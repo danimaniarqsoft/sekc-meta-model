@@ -29,7 +29,61 @@ import mx.infotec.dads.sekc.model.essence.foundation.*;
 import java.util.*;
 
 /**
- * The Class Action.
+ * <pre>
+ * <b>Description: </b>
+ * </pre>
+ * 
+ * The Class Action. An operation performed by an activity on a particular work
+ * product.
+ * 
+ * <pre>
+ * 
+ * <b>Invariant:</b>
+ * 
+ * {@code
+ * -- The action touches either alphas or work products, but not both nor nothing
+ * (self.alpha->isEmpty() implies self.workProduct->notEmpty()) and (self.alpha
+ * ->notEmpty() implies self.workProduct->isEmpty())
+ * }
+ * </pre>
+ * 
+ * <pre>
+ * 
+ * <b>Additional Operation:</b>
+ * 
+ * {@code
+ * 
+ * }
+ * </pre>
+ * 
+ * <pre>
+ * 
+ * <b>Semantics:</b>
+ * 
+ * Activities may involve work products in different ways. In an action, one of four possible operations can be specified that
+ * an activity performs on a work product:
+ * </pre>
+ * <ul>
+ * <li><b>“create”:</b> The activity creates the work product. It is likely to
+ * use this kind of operation in activities that set up an environment or create
+ * initial version of work products.</li>
+ * <li><b>“read”:</b> The activity reads the work product but does not change
+ * it. This kind of operation assumes that the work product needs to be present
+ * to be successful in this activity. It is likely to use this kind of operation
+ * in activities that transform contents from one work product into other work
+ * products.</li>
+ * <li><b>“update”:</b> The activity possibly modifies the work product. In an
+ * actual endeavor, there may be cases in which no modification is necessary,
+ * but there is at least one case in which the work product has changed after
+ * performing the activity. This kind of operation assumes that the work product
+ * needs to be present to be successful in this activity.</li>
+ * <li><b>“delete”:</b> The activity deletes the work product. This kind of
+ * operation assumes that the work product no longer exists if the activity is
+ * completed successfully. Note that deleted work products cannot be covered by
+ * completion criteria. It is likely to use this kind of operation in activities
+ * that finalize an endeavor and thus remove intermediate results for privacy or
+ * security reasons.</li>
+ * </ul>
  *
  * @author Daniel Cortes Pichardo
  * @version 1.1

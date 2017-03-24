@@ -28,8 +28,30 @@ import java.util.Collection;
 import mx.infotec.dads.sekc.model.essence.foundation.BasicElement;
 
 /**
+ * <pre>
+ * <b>Description: </b>
+ * </pre>
+ * 
  * The Class AbstractActivity. An abstract activity is either a placeholder for
  * something to be done or a concrete activity to be performed.
+ * 
+ * <pre>
+ * 
+ * <b>Invariant:</b>
+ * 
+ * {@code
+ * true
+ * }
+ * </pre>
+ * 
+ * <pre>
+ * 
+ * <b>Semantics:</b>
+ * 
+ * Abstract activities serve as a super class for activity spaces and activities. Each abstract activity has to have completion 
+ * criteria, telling the practitioner when the abstract activity can be considered completed.
+ * 
+ * </pre>
  *
  * @author Daniel Cortes Pichardo
  * @version 1.1

@@ -23,12 +23,42 @@
  */
 package mx.infotec.dads.sekc.model.essence.activityspaceandactivity;
 
-import java.util.*;
+import java.util.Collection;
 
-import mx.infotec.dads.sekc.model.essence.alphaandworkproduct.*;
+import mx.infotec.dads.sekc.model.essence.alphaandworkproduct.Alpha;
 
 /**
- * The Class ActivitySpace.
+ * <pre>
+ * <b>Description: </b>
+ * </pre>
+ * 
+ * The Class ActivitySpace. A placeholder for something to be done in the
+ * software engineering endeavor.
+ * 
+ * <pre>
+ * 
+ * <b>Invariant:</b>
+ * 
+ * {@code
+ * true
+ * }
+ * </pre>
+ * 
+ * <pre>
+ * 
+ * <b>Semantics:</b>
+ * 
+ * An activity space is a high-level abstraction representing “something to be done”. It uses a (possibly empty) collection of
+ * alphas as input to the work. When the work is concluded a collection of alphas (possibly some of the alphas used as
+ * input) has been updated. The update may cause a change of the alpha’s state. When the update and the state change of an
+ * alpha takes place is not defined; only that it has been done when the activity space is completed.
+ * 
+ * What should have been accomplished when the work performed in the activity space is completed, i.e., the activity
+ * space’s completion criteria, is expressed in terms of which states the output alphas should have reached. Using the
+ * checkpoints for the states of alphas, it is at the discretion of the team to decide when a state change has occurred and thus
+ * the completion criteria of the activity space have been met.
+ * 
+ * </pre>
  *
  * @author Daniel Cortes Pichardo
  * @version 1.1
@@ -36,7 +66,10 @@ import mx.infotec.dads.sekc.model.essence.alphaandworkproduct.*;
  */
 public class ActivitySpace extends AbstractActivity {
 
-	/** The input. */
-	public Collection<Alpha> input;
+    /**
+     * A collection of alphas that have to be present to be successful in
+     * fulfilling the objectives of this activity space.
+     */
+    public Collection<Alpha> input;
 
 }

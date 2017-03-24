@@ -26,7 +26,31 @@ package mx.infotec.dads.sekc.model.essence.foundation;
 import java.util.*;
 
 /**
- * The Class EndeavorAssociation.
+ * <pre>
+ * <b>Description: </b>
+ * </pre>
+ * 
+ * The Class EndeavorAssociation. Represents associations that you want to track
+ * during an endeavor.
+ * 
+ * <pre>
+ * 
+ * <b>Invariant:</b>
+ * 
+ * {@code
+ * true
+ * }
+ * </pre>
+ * 
+ * <pre>
+ * 
+ * <b>Semantics:</b>
+ * 
+ * Endeavor associations are used to link actual instances of elements on metalevel 0 (aka “the endeavor level”). This can
+ * be used for instance to keep track of which particular document (an instance of a work product) was created by which
+ * particular team member (an instance of alpha “Team member”). In general, these associations have no specific semantics
+ * within Essence.
+ * </pre>
  *
  * @author Daniel Cortes Pichardo
  * @version 1.1
@@ -36,7 +60,7 @@ public class EndeavorAssociation {
 
     /** The owned end. */
     public Collection<EndeavorProperty> ownedEnd;
-    
+
     /** The member end. */
     public Collection<EndeavorProperty> memberEnd;
 

@@ -24,7 +24,28 @@
 package mx.infotec.dads.sekc.model.essence.activityspaceandactivity;
 
 /**
- * The Class EntryCriterion.
+ * <pre>
+ * <b>Description: </b>
+ * </pre>
+ * 
+ * The Class EntryCriterion. EntryCriterion specializes Criterion and must be
+ * satisfied before work of an activity can be started.
+ * 
+ * <pre>
+ * <b>Invariant:</b> 
+ * </pre>
+ * @see Criterion
+ * 
+ * <pre>
+ * 
+ * <b>Semantics:</b>
+ * 
+ * An entry criterion is fulfilled when the alpha state or work product level of detail defined by the entry criterion is
+ * reached. The work of an activity may be started when all its entry criteria are fulfilled. The work of an activity space may
+ * be started when one or more of its entry criteria are fulfilled; the work started (by activities in the activity space) can only
+ * be done in relation to the alphas that fulfill the entry criteria.
+ * 
+ * </pre>
  *
  * @author Daniel Cortes Pichardo
  * @version 1.1

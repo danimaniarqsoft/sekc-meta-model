@@ -23,10 +23,32 @@
  */
 package mx.infotec.dads.sekc.model.essence.activityspaceandactivity;
 
-import mx.infotec.dads.sekc.model.essence.foundation.*;
+import mx.infotec.dads.sekc.model.essence.foundation.LanguageElement;
 
 /**
- * The Class Approach.
+ * <pre>
+ * <b>Description: </b>
+ * </pre>
+ * 
+ * The Class Approach. An Approach defines one way to accomplish some work. An
+ * approach is specified in the context of a specific activity.
+ * 
+ * <pre>
+ * 
+ * <b>Invariant:</b>
+ * 
+ * {@code
+ * }
+ * </pre>
+ * 
+ * <pre>
+ * 
+ * <b>Semantics:</b>
+ * 
+ * The Approach element defines or describes how a particular Activity is accomplished. Multiple Approaches may be
+ * associated with a single Activity. Also, an Approach, if generic enough, may be associated with multiple Activities.
+ * 
+ * </pre>
  *
  * @author Daniel Cortes Pichardo
  * @version 1.1
@@ -34,13 +56,15 @@ import mx.infotec.dads.sekc.model.essence.foundation.*;
  */
 public class Approach extends LanguageElement {
 
-    /** The activity. */
+    /** The activity */
     public Activity activity;
-    
-    /** The name. */
+
+    /** The name of the Approach */
     public String name;
-    
-    /** The description. */
+
+    /**
+     * Contains the detailed description or definition of the Approach.
+     */
     public String description;
 
 }

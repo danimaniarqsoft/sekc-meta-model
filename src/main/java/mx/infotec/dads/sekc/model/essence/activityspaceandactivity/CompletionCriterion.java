@@ -24,7 +24,27 @@
 package mx.infotec.dads.sekc.model.essence.activityspaceandactivity;
 
 /**
- * The Class CompletionCriterion.
+ * <pre>
+ * <b>Description: </b>
+ * </pre>
+ * 
+ * The Class CompletionCriterion. CompletionCriterion specializes Criterion and
+ * must be satisfied to consider work of an activity as complete.
+ * 
+ * <pre>
+ * <b>Invariant:</b>
+ * </pre>
+ * 
+ * @see Criterion
+ * 
+ * 
+ * <pre>
+ * 
+ * <b>Semantics:</b>
+ * 
+ * The work of an activity or activity space is considered complete when its completion criteria are fulfilled, i.e., when the
+ * alpha states or work product levels of detail defined by the completion criteria are reached.
+ * </pre>
  *
  * @author Daniel Cortes Pichardo
  * @version 1.1
