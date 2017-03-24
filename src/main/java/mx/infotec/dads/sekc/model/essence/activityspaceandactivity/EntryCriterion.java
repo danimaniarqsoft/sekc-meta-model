@@ -32,9 +32,10 @@ package mx.infotec.dads.sekc.model.essence.activityspaceandactivity;
  * satisfied before work of an activity can be started.
  * 
  * <pre>
+ * 
  * <b>Invariant:</b> 
+ * see {@link Criterion}
  * </pre>
- * @see Criterion
  * 
  * <pre>
  * 

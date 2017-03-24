@@ -33,10 +33,8 @@ package mx.infotec.dads.sekc.model.essence.activityspaceandactivity;
  * 
  * <pre>
  * <b>Invariant:</b>
+ * see {@link Criterion}
  * </pre>
- * 
- * @see Criterion
- * 
  * 
  * <pre>
  * 

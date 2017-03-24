@@ -47,16 +47,7 @@ import mx.infotec.dads.sekc.model.essence.foundation.*;
  * levelOfDetail<> null)
  * }
  * </pre>
- * 
- * <pre>
- * 
- * <b>Additional Operation:</b>
- * 
- * {@code
- * 
- * }
- * </pre>
- * 
+ *  
  * <pre>
  * 
  * <b>Semantics:</b>

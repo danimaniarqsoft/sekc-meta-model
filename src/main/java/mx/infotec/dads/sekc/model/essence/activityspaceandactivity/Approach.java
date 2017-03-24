@@ -38,6 +38,7 @@ import mx.infotec.dads.sekc.model.essence.foundation.LanguageElement;
  * <b>Invariant:</b>
  * 
  * {@code
+ * true
  * }
  * </pre>
  * 
