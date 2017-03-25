@@ -4,4 +4,4 @@
  * 
  * @since 1.1
  */
-package mx.infotec.dads.sekc.model.essence.diagramInterchange;
+package mx.infotec.dads.sekc.model.essence.diagraminterchange;

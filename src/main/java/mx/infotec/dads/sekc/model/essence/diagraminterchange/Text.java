@@ -21,32 +21,14 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-package mx.infotec.dads.sekc.model.essence.diagramInterchange;
-
-import mx.infotec.dads.sekc.model.essence.foundation.*;
+package mx.infotec.dads.sekc.model.essence.diagraminterchange;
 
 /**
- * The Class Card.
+ * The Class Text.
  *
  * @author Daniel Cortes Pichardo
  * @version 1.1
  * @since essence 1.1
  */
-public class Card {
-
-    /** The model element. */
-    public BasicElement modelElement;
-    
-    /** The right header side. */
-    public Label rightHeaderSide;
-    
-    /** The left header side. */
-    public Node leftHeaderSide;
-    
-    /** The left body side. */
-    public Diagram leftBodySide;
-    
-    /** The right body side. */
-    public Text rightBodySide;
-
+public class Text {
 }

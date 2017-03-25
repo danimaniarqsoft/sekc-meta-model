@@ -21,21 +21,32 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-package mx.infotec.dads.sekc.model.essence.diagramInterchange;
+package mx.infotec.dads.sekc.model.essence.diagraminterchange;
+
+import mx.infotec.dads.sekc.model.essence.foundation.*;
 
 /**
- * The Class Node.
+ * The Class DetailCard.
  *
  * @author Daniel Cortes Pichardo
  * @version 1.1
  * @since essence 1.1
  */
-public class Node extends DiagramElement {
+public class DetailCard {
 
-    /** The bottom right label. */
-    public Label bottomRightLabel;
+    /** The left header side. */
+    public Node leftHeaderSide;
     
-    /** The name. */
-    public Label name;
+    /** The footer. */
+    public Label footer;
+    
+    /** The header. */
+    public Node header;
+    
+    /** The body. */
+    public Text body;
+    
+    /** The model element. */
+    public BasicElement modelElement;
 
 }

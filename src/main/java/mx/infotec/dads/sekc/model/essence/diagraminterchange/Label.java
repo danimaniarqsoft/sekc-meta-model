@@ -21,14 +21,14 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-package mx.infotec.dads.sekc.model.essence.diagramInterchange;
+package mx.infotec.dads.sekc.model.essence.diagraminterchange;
 
 /**
- * The Class DiagramElement.
+ * The Class Label.
  *
  * @author Daniel Cortes Pichardo
  * @version 1.1
  * @since essence 1.1
  */
-public class DiagramElement {
+public class Label {
 }

@@ -21,14 +21,30 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-package mx.infotec.dads.sekc.model.essence.diagramInterchange;
+package mx.infotec.dads.sekc.model.essence.diagraminterchange;
 
 /**
- * The Class Text.
+ * The Class Link.
  *
  * @author Daniel Cortes Pichardo
  * @version 1.1
  * @since essence 1.1
  */
-public class Text {
+public class Link extends DiagramElement {
+
+    /** The end 1 bounds. */
+    public Label end1bounds;
+    
+    /** The target. */
+    public Node target;
+    
+    /** The source. */
+    public Node source;
+    
+    /** The name. */
+    public Label name;
+    
+    /** The end 2 bounds. */
+    public Label end2bounds;
+
 }

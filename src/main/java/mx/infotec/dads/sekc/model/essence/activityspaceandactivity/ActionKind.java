@@ -51,14 +51,14 @@ package mx.infotec.dads.sekc.model.essence.activityspaceandactivity;
 public enum ActionKind {
 
     /** Indicates a delete Action */
-    delete,
+    DELETE,
 
     /** Indicates a create Action */
-    create,
+    CREATE,
 
     /** Indicates a read Action */
-    read,
+    READ,
 
     /** Indicates an update Action */
-    update
+    UPDATE
 }
