@@ -80,15 +80,6 @@ import mx.infotec.dads.sekc.model.essence.competency.*;
  * @version 1.1
  * @since essence 1.1
  */
-public class Activity extends AbstractActivity {
-
-    /** The approach. */
-    public Collection<Approach> approach;
-
-    /** The action. */
-    public Collection<Action> action;
-
-    /** The required competency level. */
-    public Collection<CompetencyLevel> requiredCompetencyLevel;
+public class Activity {
 
 }

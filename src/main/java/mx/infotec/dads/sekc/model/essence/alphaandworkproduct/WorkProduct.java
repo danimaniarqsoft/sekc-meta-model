@@ -72,15 +72,6 @@ import java.util.*;
  * @version 1.1
  * @since essence 1.1
  */
-public class WorkProduct extends BasicElement {
-
-    /** The level of details defined for the work product. */
-    public Collection<LevelOfDetail> levelOfDetail;
-
-    /** The action. */
-    public Collection<Action> action;
-
-    /** The work product manifest. */
-    public Collection<WorkProductManifest> workProductManifest;
+public class WorkProduct {
 
 }

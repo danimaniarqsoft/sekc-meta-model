@@ -23,8 +23,6 @@
  */
 package mx.infotec.dads.sekc.model.essence.foundation;
 
-import java.util.*;
-
 /**
  * <pre>
  * <b>Description: </b>
@@ -62,9 +60,6 @@ import java.util.*;
  * @version 1.1
  * @since essence 1.1
  */
-public class Pattern extends BasicElement {
-
-    /** Named association types between elements */
-    public Collection<PatternAssociation> association;
+public class Pattern {
 
 }

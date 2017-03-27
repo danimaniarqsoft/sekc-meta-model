@@ -62,15 +62,6 @@ import java.util.Collection;
  * @version 1.1
  * @since essence 1.1
  */
-public class PatternAssociation extends LanguageElement {
-
-    /** Name of the association. */
-    public String name;
-
-    /** The elements taking part in the pattern via this association */
-    public Collection<LanguageElement> elements;
-
-    /** The pattern. */
-    public Pattern pattern;
+public class PatternAssociation {
 
 }

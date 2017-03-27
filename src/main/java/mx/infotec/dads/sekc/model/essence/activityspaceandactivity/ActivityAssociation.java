@@ -77,15 +77,6 @@ import mx.infotec.dads.sekc.model.essence.foundation.LanguageElement;
  * @version 1.1
  * @since essence 1.1
  */
-public class ActivityAssociation extends LanguageElement {
-
-    /** The first member of the association. */
-    public AbstractActivity end2;
-
-    /** The second member of the association. */
-    public AbstractActivity end1;
-
-    /** The kind of the association. */
-    public String kind;
+public class ActivityAssociation {
 
 }

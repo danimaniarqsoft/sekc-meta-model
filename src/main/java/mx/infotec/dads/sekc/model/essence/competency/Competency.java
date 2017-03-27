@@ -63,9 +63,6 @@ import mx.infotec.dads.sekc.model.essence.foundation.*;
  * @version 1.1
  * @since essence 1.1
  */
-public class Competency extends BasicElement {
-
-    /** A collection of levels defined for this competency. */
-    public Collection<CompetencyLevel> possibleLevel;
+public class Competency {
 
 }

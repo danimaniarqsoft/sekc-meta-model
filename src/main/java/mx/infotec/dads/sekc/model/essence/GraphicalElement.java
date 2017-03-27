@@ -31,4 +31,5 @@ package mx.infotec.dads.sekc.model.essence;
  * @since essence 1.1
  */
 public class GraphicalElement {
+    
 }

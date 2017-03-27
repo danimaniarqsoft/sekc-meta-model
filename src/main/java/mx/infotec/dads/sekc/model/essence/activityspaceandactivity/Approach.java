@@ -55,17 +55,6 @@ import mx.infotec.dads.sekc.model.essence.foundation.LanguageElement;
  * @version 1.1
  * @since essence 1.1
  */
-public class Approach extends LanguageElement {
-
-    /** The activity */
-    public Activity activity;
-
-    /** The name of the Approach */
-    public String name;
-
-    /**
-     * Contains the detailed description or definition of the Approach.
-     */
-    public String description;
+public class Approach {
 
 }

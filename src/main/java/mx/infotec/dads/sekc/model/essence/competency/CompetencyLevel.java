@@ -23,12 +23,6 @@
  */
 package mx.infotec.dads.sekc.model.essence.competency;
 
-import java.util.Collection;
-
-import mx.infotec.dads.sekc.model.essence.activityspaceandactivity.Activity;
-import mx.infotec.dads.sekc.model.essence.foundation.Checkpoint;
-import mx.infotec.dads.sekc.model.essence.foundation.LanguageElement;
-
 /**
  * <pre>
  * <b>Description: </b>
@@ -63,27 +57,6 @@ import mx.infotec.dads.sekc.model.essence.foundation.LanguageElement;
  * @version 1.1
  * @since essence 1.1
  */
-public class CompetencyLevel extends LanguageElement {
-
-    /** The name of the competency level */
-    public String name;
-
-    /** A short description of what the competency level is */
-    public String briefDescription;
-
-    /**
-     * A numeric indicator for the level, where a higher number means
-     * more/better competence.
-     */
-    public int level;
-
-    /** The activity. */
-    public Collection<Activity> activity;
-
-    /** The competency. */
-    public Competency competency;
-
-    /** The checklist item. */
-    public Collection<Checkpoint> checklistItem;
+public class CompetencyLevel {
 
 }

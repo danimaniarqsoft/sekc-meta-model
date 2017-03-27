@@ -23,9 +23,6 @@
  */
 package mx.infotec.dads.sekc.model.essence.activityspaceandactivity;
 
-import mx.infotec.dads.sekc.model.essence.alphaandworkproduct.*;
-import mx.infotec.dads.sekc.model.essence.foundation.*;
-
 /**
  * <pre>
  * <b>Description: </b>
@@ -47,7 +44,7 @@ import mx.infotec.dads.sekc.model.essence.foundation.*;
  * levelOfDetail<> null)
  * }
  * </pre>
- *  
+ * 
  * <pre>
  * 
  * <b>Semantics:</b>
@@ -63,18 +60,6 @@ import mx.infotec.dads.sekc.model.essence.foundation.*;
  * @version 1.1
  * @since essence 1.1
  */
-public abstract class Criterion extends LanguageElement {
-
-    /** The activity. */
-    public AbstractActivity activity;
-
-    /** A state to be reached. */
-    public State state;
-
-    /** A level of detail to be reached. */
-    public LevelOfDetail levelOfDetail;
-
-    /** The description of the Criterion */
-    public String description;
+public abstract class Criterion {
 
 }

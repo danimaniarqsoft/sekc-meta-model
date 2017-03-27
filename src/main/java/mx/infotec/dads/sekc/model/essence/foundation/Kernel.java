@@ -23,8 +23,6 @@
  */
 package mx.infotec.dads.sekc.model.essence.foundation;
 
-import java.util.*;
-
 /**
  * <pre>
  * <b>Description: </b>
@@ -88,16 +86,6 @@ import java.util.*;
  * @version 1.1
  * @since essence 1.1
  */
-public class Kernel extends ElementGroup {
-
-    /** The referring method. */
-    public Collection<Method> referringMethod;
-
-    /**
-     * A set of rules on the consistency of a particular Kernel. The format for
-     * writing these rules is out of the scope of this specification. It is
-     * recommended to use either plain text or OCL.
-     */
-    public String consistencyRules;
+public class Kernel {
 
 }

@@ -60,26 +60,6 @@ import mx.infotec.dads.sekc.model.essence.foundation.*;
  * @version 1.1
  * @since essence 1.1
  */
-public class AlphaAssociation extends LanguageElement {
+public class AlphaAssociation {
 
-    /** Lower bound of association endpoint 1. */
-    public int end1lowerBound;
-
-    /** Upper bound of association endpoint 1. */
-    public int end1upperBound;
-
-    /** Lower bound of association endpoint 2. */
-    public int end2lowerBound;
-
-    /** Upper bound of association endpoint 2. */
-    public int end2upperBound;
-
-    /** Name of the alpha association. */
-    public String name;
-
-    /** The alpha endpoint 1 of the association. */
-    public Alpha end1;
-
-    /** The alpha endpoint 2 of the association. */
-    public Alpha end2;
 }

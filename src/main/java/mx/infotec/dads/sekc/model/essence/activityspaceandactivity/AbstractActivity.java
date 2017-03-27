@@ -23,10 +23,6 @@
  */
 package mx.infotec.dads.sekc.model.essence.activityspaceandactivity;
 
-import java.util.Collection;
-
-import mx.infotec.dads.sekc.model.essence.foundation.BasicElement;
-
 /**
  * <pre>
  * <b>Description: </b>
@@ -57,15 +53,6 @@ import mx.infotec.dads.sekc.model.essence.foundation.BasicElement;
  * @version 1.1
  * @since essence 1.1
  */
-public abstract class AbstractActivity extends BasicElement {
-
-    /** The activity association. */
-    public Collection<ActivityAssociation> activityAssociation;
-
-    /**
-     * The criterion. A collection of criteria that have to be fulfilled for
-     * entering the activity or considering the activity completed
-     */
-    public Collection<Criterion> criterion;
+public abstract class AbstractActivity {
 
 }

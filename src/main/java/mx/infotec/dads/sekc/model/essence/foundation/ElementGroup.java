@@ -81,40 +81,6 @@ import mx.infotec.dads.sekc.model.essence.GraphicalElement;
  * @since essence 1.1
  * 
  */
-public abstract class ElementGroup extends LanguageElement {
-
-    /** The name of the element group */
-    public String name;
-
-    /** The icon to be used when presenting the element group */
-    public GraphicalElement icon;
-
-    /**
-     * A short description of what the group is. It is discoraged to use rich
-     * formatting and structuring elements like section headings in the brief
-     * description. The content of this attribute should be a summary of the
-     * content given in attribute "description".
-     */
-    public String briefDescription;
-
-    /**
-     * A more detailed description of the group. The content of this attribute
-     * may be written in a markup language to allow for rich descriptions. It
-     * may include section headings, formatting information, hyperlinks, or
-     * similar to ease structured reading and navigation.
-     */
-    public String description;
-
-    /** The merge resolution. */
-    public Collection<MergeResolution> mergeResolution;
-
-    /** The language elements this group owns by value */
-    public Collection<LanguageElement> ownedElements;
-
-    /** The language elements this group owns by reference */
-    public Collection<LanguageElement> referredElements;
-
-    /** The extension. */
-    public Collection<ExtensionElement> extension;
+public abstract class ElementGroup {
 
 }

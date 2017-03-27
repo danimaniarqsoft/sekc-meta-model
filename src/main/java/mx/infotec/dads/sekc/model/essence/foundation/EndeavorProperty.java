@@ -57,28 +57,4 @@ package mx.infotec.dads.sekc.model.essence.foundation;
  */
 public class EndeavorProperty {
 
-    /** The language element. */
-    public LanguageElement languageElement;
-
-    /**
-     * The association used to express this property if it is not a simple
-     * property.
-     */
-    public EndeavorAssociation association;
-
-    /** The association owning this property */
-    public EndeavorAssociation owningAssociation;
-
-    /** The type of the property */
-    public Type type;
-
-    /** Name of the property */
-    public String name;
-
-    /** Lower bound of the property */
-    public int lowerBound;
-
-    /** Upper bound of the property */
-    public int upperBound;
-
 }

@@ -65,7 +65,7 @@ import mx.infotec.dads.sekc.model.essence.view.*;
  * @version 1.1
  * @since essence 1.1
  */
-public abstract class LanguageElement {
+public abstract class LanguageElement implements org.omg.essence.model.foundation.LanguageElement {
 
     /**
      * A flag indicating whether this element may be suppressed in an extension

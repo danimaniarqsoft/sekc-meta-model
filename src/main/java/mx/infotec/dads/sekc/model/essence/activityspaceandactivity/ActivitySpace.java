@@ -64,12 +64,6 @@ import mx.infotec.dads.sekc.model.essence.alphaandworkproduct.Alpha;
  * @version 1.1
  * @since essence 1.1
  */
-public class ActivitySpace extends AbstractActivity {
-
-    /**
-     * A collection of alphas that have to be present to be successful in
-     * fulfilling the objectives of this activity space.
-     */
-    public Collection<Alpha> input;
+public class ActivitySpace {
 
 }

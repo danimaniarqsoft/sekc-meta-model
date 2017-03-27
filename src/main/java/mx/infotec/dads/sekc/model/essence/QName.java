@@ -23,7 +23,6 @@
  */
 package mx.infotec.dads.sekc.model.essence;
 
-
 /**
  * The Class QName.
  *

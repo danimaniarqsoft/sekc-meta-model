@@ -23,10 +23,6 @@
  */
 package mx.infotec.dads.sekc.model.essence.view;
 
-import java.util.*;
-
-import mx.infotec.dads.sekc.model.essence.foundation.*;
-
 /**
  * <pre>
  * <b>Description: </b>
@@ -60,34 +56,6 @@ import mx.infotec.dads.sekc.model.essence.foundation.*;
  * @version 1.1
  * @since essence 1.1
  */
-public class ViewSelection extends LanguageElement {
-
-    /** The name of the view. */
-    public String name;
-
-    /** A description of the view, including the purpose of the view. */
-    public String description;
-
-    /** The referring view selection. */
-    public Collection<ViewSelection> referringViewSelection;
-
-    /**
-     * The selected constructs (such as Alpha, State, etc) to be included in the
-     * view.
-     */
-    public Collection<LanguageElement> constructSelection;
-
-    /**
-     * ViewSelections to be included in this ViewSelection (provides a means to
-     * build extended and more sophisticated views based on existing/smaller
-     * views)
-     */
-    public Collection<ViewSelection> includedViewSelection;
-
-    /**
-     * The selected features, such as attributes and associations of constructs
-     * to be included in the view.
-     */
-    public Collection<FeatureSelection> featureSelection;
+public class ViewSelection {
 
 }

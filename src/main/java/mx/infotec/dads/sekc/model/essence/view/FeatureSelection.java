@@ -23,10 +23,6 @@
  */
 package mx.infotec.dads.sekc.model.essence.view;
 
-import java.util.*;
-
-import mx.infotec.dads.sekc.model.essence.foundation.*;
-
 /**
  * <pre>
  * <b>Description: </b>
@@ -58,18 +54,6 @@ import mx.infotec.dads.sekc.model.essence.foundation.*;
  * @version 1.1
  * @since essence 1.1
  */
-public class FeatureSelection extends LanguageElement {
-
-    /**
-     * The feature name. The name of the referred feature, such as the name of
-     * an attribute or the role name of an association.
-     */
-    public String featureName;
-
-    /** The view selection. */
-    public Collection<ViewSelection> viewSelection;
-
-    /** The construct. */
-    public LanguageElement construct;
+public class FeatureSelection {
 
 }

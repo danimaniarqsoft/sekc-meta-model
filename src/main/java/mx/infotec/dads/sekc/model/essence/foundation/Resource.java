@@ -59,15 +59,6 @@ package mx.infotec.dads.sekc.model.essence.foundation;
  * @version 1.1
  * @since essence 1.1
  */
-public class Resource extends LanguageElement {
-
-    /**
-     * A reference to the content of the resource. The reference can be provided
-     * in any suitable way, e.g., as a hyperlink or as a full text document.
-     */
-    public String content;
-
-    /** The language element */
-    public LanguageElement languageElement;
+public class Resource {
 
 }

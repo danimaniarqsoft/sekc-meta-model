@@ -52,5 +52,5 @@ package mx.infotec.dads.sekc.model.essence.activityspaceandactivity;
  * @version 1.1
  * @since essence 1.1
  */
-public class EntryCriterion extends Criterion {
+public class EntryCriterion {
 }

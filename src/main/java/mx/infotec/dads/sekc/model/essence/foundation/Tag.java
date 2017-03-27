@@ -57,12 +57,6 @@ package mx.infotec.dads.sekc.model.essence.foundation;
  * @version 1.1
  * @since essence 1.1
  */
-public class Tag extends LanguageElement {
-
-    /** The Value of the tag. */
-    public String value;
-
-    /** The language element. */
-    public LanguageElement languageElement;
+public class Tag {
 
 }

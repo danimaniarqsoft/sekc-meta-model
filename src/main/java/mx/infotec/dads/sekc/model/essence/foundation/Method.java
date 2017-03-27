@@ -65,17 +65,6 @@ package mx.infotec.dads.sekc.model.essence.foundation;
  * @version 1.1
  * @since essence 1.1
  */
-public class Method extends ElementGroup {
-
-    /**
-     * The purpose of this Method. The content of this attribute should be an
-     * explicit short statement that describes the goal that the method pursues.
-     * Additional explanations can be given in the attribute “description”
-     * inherited from “ElementGroup”.
-     */
-    public String purpose;
-
-    /** The Kernel this Method is based on */
-    public Kernel baseKernel;
+public class Method {
 
 }

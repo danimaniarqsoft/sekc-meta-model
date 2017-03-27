@@ -23,8 +23,6 @@
  */
 package mx.infotec.dads.sekc.model.essence.foundation;
 
-import java.util.*;
-
 /**
  * <pre>
  * <b>Description: </b>
@@ -129,40 +127,6 @@ import java.util.*;
  * @version 1.1
  * @since essence 1.1
  */
-public class Practice extends ElementGroup {
-
-    /**
-     * Rules on the consistency of a particular Practice. The format for writing
-     * these rules is out of the scope of this specification. It is recommended
-     * to use either plain text or OCL.
-     */
-    public String consistencyRules;
-
-    /**
-     * The objective of this Practice, expressed as a concise and isolated
-     * phrase. The content of this attribute should be an explicit and short
-     * statement that describes the goal that the practice pursues. Additional
-     * explanations can be given in the attribute “description” inherited from
-     * “ElementGroup”.
-     */
-    public String objective;
-
-    /**
-     * List of standard units used to evaluate the practice performance and the
-     * objectives’ achievement.
-     */
-    public Collection<String> measures;
-
-    /**
-     * Expected characteristics of elements needed to start the execution of a
-     * practice.
-     */
-    public Collection<String> entry;
-
-    /**
-     * Expected characteristics of elements required as outputs after the
-     * execution a practice is completed.
-     */
-    public Collection<String> result;
+public class Practice {
 
 }

@@ -23,10 +23,6 @@
  */
 package mx.infotec.dads.sekc.model.essence.userdefinedtypes;
 
-import java.util.*;
-
-import mx.infotec.dads.sekc.model.essence.foundation.*;
-
 /**
  * <pre>
  * <b>Description: </b>
@@ -63,27 +59,6 @@ import mx.infotec.dads.sekc.model.essence.foundation.*;
  * @version 1.1
  * @since essence 1.1
  */
-public class UserDefinedType extends LanguageElement {
-
-    /** The name of the type. */
-    public String name;
-
-    /** A short description of what the type is about. */
-    public String description;
-
-    /**
-     * Rules that apply to all constructs using this type. It is recommended to
-     * use either plain text or OCL.
-     */
-    public String constraint;
-
-    /** The typed resource. */
-    public Collection<TypedResource> typedResource;
-
-    /** The typed pattern. */
-    public Collection<TypedPattern> typedPattern;
-
-    /** The typed tag. */
-    public Collection<TypedTag> typedTag;
+public class UserDefinedType {
 
 }

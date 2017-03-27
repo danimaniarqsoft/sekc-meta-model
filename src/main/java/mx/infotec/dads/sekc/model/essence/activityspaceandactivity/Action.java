@@ -23,11 +23,6 @@
  */
 package mx.infotec.dads.sekc.model.essence.activityspaceandactivity;
 
-import mx.infotec.dads.sekc.model.essence.alphaandworkproduct.*;
-import mx.infotec.dads.sekc.model.essence.foundation.*;
-
-import java.util.*;
-
 /**
  * <pre>
  * <b>Description: </b>
@@ -80,18 +75,6 @@ import java.util.*;
  * @version 1.1
  * @since essence 1.1
  */
-public class Action extends LanguageElement {
-
-    /** The activity. */
-    public Activity activity;
-
-    /** The alpha. */
-    public Collection<Alpha> alpha;
-
-    /** The work product. */
-    public Collection<WorkProduct> workProduct;
-
-    /** The kind. */
-    public ActionKind kind;
+public class Action {
 
 }

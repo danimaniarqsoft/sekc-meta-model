@@ -55,18 +55,6 @@ package mx.infotec.dads.sekc.model.essence.foundation;
  * @version 1.1
  * @since essence 1.1
  */
-public class MergeResolution extends LanguageElement {
-
-    /** The name of the attribute on which the conflict is solved. */
-    public String targetAttribute;
-
-    /** The name of the element on which the conflict is solved. */
-    public String targetName;
-
-    /** The function applied to the target attribute. */
-    public String resolutionFunction;
-
-    /** The element group. */
-    public ElementGroup elementGroup;
+public class MergeResolution {
 
 }

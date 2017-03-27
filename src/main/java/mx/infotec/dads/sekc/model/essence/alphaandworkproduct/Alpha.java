@@ -94,24 +94,6 @@ import java.util.*;
  * @version 1.1
  * @since essence 1.1
  */
-public class Alpha extends BasicElement {
-
-    /** The states of the alpha. */
-    public Collection<State> states;
-
-    /** The action. */
-    public Collection<Action> action;
-
-    /** The activity space. */
-    public ActivitySpace activitySpace;
-
-    /** The alpha containment. */
-    public Collection<AlphaContainment> alphaContainment;
-
-    /** The alpha association. */
-    public Collection<AlphaAssociation> alphaAssociation;
-
-    /** The work product manifest. */
-    public Collection<WorkProductManifest> workProductManifest;
+public class Alpha {
 
 }

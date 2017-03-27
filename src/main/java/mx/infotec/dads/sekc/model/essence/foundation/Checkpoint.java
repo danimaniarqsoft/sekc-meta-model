@@ -63,24 +63,6 @@ import mx.infotec.dads.sekc.model.essence.competency.*;
  * @version 1.1
  * @since essence 1.1
  */
-public class Checkpoint extends LanguageElement {
-
-    /** The name of the checkpoint. */
-    public String name;
-
-    /** A description of the checkpoint. */
-    public String description;
-
-    /** An optional abbreviated version of the full description. */
-    public String shortDescription;
-
-    /** The level. */
-    public LevelOfDetail level;
-
-    /** The state. */
-    public State state;
-
-    /** The competency level. */
-    public CompetencyLevel competencyLevel;
+public class Checkpoint {
 
 }

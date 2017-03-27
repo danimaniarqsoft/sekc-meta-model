@@ -56,18 +56,6 @@ package mx.infotec.dads.sekc.model.essence.foundation;
  * @version 1.1
  * @since essence 1.1
  */
-public class ExtensionElement extends LanguageElement {
-
-    /** The element group. */
-    public ElementGroup elementGroup;
-
-    /** The element to be extended */
-    public LanguageElement targetElement;
-
-    /** The name of the attribute which is to be extended */
-    public String targetAttribute;
-
-    /** The function applied to the target attribute */
-    public String extensionFunction;
+public class ExtensionElement {
 
 }

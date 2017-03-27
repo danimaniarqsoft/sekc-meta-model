@@ -59,18 +59,5 @@ import mx.infotec.dads.sekc.model.essence.foundation.*;
  * @version 1.1
  * @since essence 1.1
  */
-public class AlphaContainment extends LanguageElement {
-
-    /** Lower bound for the number of instances of the sub(ordinate)-alpha. */
-    public int lowerBound;
-
-    /** Upper bound for the number of instances of the sub(ordinate)-alpha. */
-    public int upperBound;
-
-    /** The super alpha */
-    public Alpha superAlpha;
-
-    /** The subordinate alpha. */
-    public Alpha subordinateAlpha;
-
+public class AlphaContainment {
 }

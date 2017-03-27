@@ -23,8 +23,6 @@
  */
 package mx.infotec.dads.sekc.model.essence.foundation;
 
-import java.util.*;
-
 /**
  * <pre>
  * <b>Description: </b>
@@ -57,11 +55,5 @@ import java.util.*;
  * @since essence 1.1
  */
 public class EndeavorAssociation {
-
-    /** The properties of this association */
-    public Collection<EndeavorProperty> ownedEnd;
-
-    /** End properties of the association */
-    public Collection<EndeavorProperty> memberEnd;
 
 }

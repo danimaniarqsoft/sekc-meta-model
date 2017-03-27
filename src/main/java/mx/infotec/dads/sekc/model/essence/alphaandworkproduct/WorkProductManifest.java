@@ -60,24 +60,6 @@ import mx.infotec.dads.sekc.model.essence.foundation.*;
  * @version 1.1
  * @since essence 1.1
  */
-public class WorkProductManifest extends LanguageElement {
-
-    /**
-     * Lower bound for the number of instances of the work product associated to
-     * one instance of the alpha.
-     */
-    public int lowerBound;
-
-    /**
-     * Upper bound for the number of instances of the work product associated to
-     * one instance of the alpha.
-     */
-    public int upperBound;
-
-    /** The alpha bound by this manifest. */
-    public Alpha alpha;
-
-    /** The work product bound by this manifest. */
-    public WorkProduct workProduct;
+public class WorkProductManifest  {
 
 }
